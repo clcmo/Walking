@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Caminhando</string>
+    <string name="permissaoGPS">Gostaria de ativar o GPS?</string>
+    <string name="GPSAtivo">Ativar GPS</string>
+    <string name="GPSInativo">Desativar GPS</string>
+    <string name="PercusoAtivo">Iniciar Percurso</string>
+    <string name="PercursoInativo">Finalizar Percurso</string>
+    <string name="Distancia">Distância Percorrida:</string>
+    <string name="Tempo">Tempo Percorrido:</string>
+    <string name="FaltadePermissao">GPS desabilitado por falta de permissão.</string>
+    <string name="PedePermissao">O app precisa do GPS ativado para mostrar a distância percorrida</string>
+</resources>

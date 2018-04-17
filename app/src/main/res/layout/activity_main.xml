@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:useDefaultMargins="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:columnCount="2"
+    android:stretchMode="columnWidth"
+    android:gravity="center"
+    tools:context="clcmo.com.br.walking.MainActivity">
+
+
+    <Button
+        android:id="@+id/permissaoGPS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:layout_margin="5dp"
+        android:background="@color/colorButton"
+        android:text="@string/permissaoGPS"
+        android:textColor="@color/txtButton" />
+
+    <Button
+        android:id="@+id/ativarGPS"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="5dp"
+        android:layout_row="1"
+        android:layout_weight="@dimen/rowWeight"
+        android:background="@color/colorButton"
+        android:text="@string/GPSAtivo"
+        android:textColor="@color/txtButton"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/desativarGPS"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="5dp"
+        android:layout_row="1"
+        android:layout_weight="@dimen/rowWeight"
+        android:background="@color/colorButton"
+        android:text="@string/GPSInativo"
+        android:textColor="@color/txtButton"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/iniciarPercurso"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="5dp"
+        android:layout_row="2"
+        android:layout_weight="@dimen/rowWeight"
+        android:background="@color/colorButton"
+        android:text="@string/PercusoAtivo"
+        android:textColor="@color/txtButton"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/finalizarPercurso"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="5dp"
+        android:layout_row="2"
+        android:layout_weight="@dimen/rowWeight"
+        android:background="@color/colorButton"
+        android:text="@string/PercursoInativo"
+        android:textColor="@color/txtButton"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/distancia"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="5dp"
+        android:layout_row="3"
+
+        android:layout_weight="@dimen/rowWeight"
+        android:text="@string/Distancia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/distanciaPercorrida"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="5dp"
+        android:layout_row="3"
+        android:layout_weight="@dimen/rowWeight"
+
+        android:text="@string/DistanciaPercorrida"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tempoPercorrido"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="5dp"
+        android:layout_row="4"
+
+        android:layout_weight="@dimen/rowWeight"
+        android:text="@string/Tempo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Chronometer
+        android:id="@+id/cronometro"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+
+
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="5dp"
+        android:layout_row="4"
+        android:layout_weight="@dimen/rowWeight"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+</GridLayout>
+

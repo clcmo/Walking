@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Walking</string>
+    <string name="DistanciaPercorrida" translatable="false" />
+    <string name="Cronometro" translatable="false" />
+    <string name="permissaoGPS">Would you like to enable GPS?</string>
+    <string name="GPSAtivo">Enable GPS</string>
+    <string name="GPSInativo">Disable GPS</string>
+    <string name="PercusoAtivo">Start Course</string>
+    <string name="PercursoInativo">End Course</string>
+    <string name="Distancia">Travelled Distance:</string>
+    <string name="Tempo">Time Spent:</string>
+    <string name="FaltadePermissao">GPS disabled because its not allowed.</string>
+    <string name="PedePermissao">" The app needs GPS enabled to show the distance traveled"</string>
+</resources>

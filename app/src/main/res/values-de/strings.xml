@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gehen</string>
+    <string name="permissaoGPS">Möchten Sie GPS aktivieren?</string>
+    <string name="GPSAtivo">Schalte GPS ein</string>
+    <string name="GPSInativo">GPS deaktivieren</string>
+    <string name="PercusoAtivo">Route starten</string>
+    <string name="PercursoInativo">Kurs beenden</string>
+    <string name="Distancia">Zurückgelegte Strecke:</string>
+    <string name="Tempo">Die Zeit gereist:</string>
+    <string name="FaltadePermissao">GPS deaktiviert wegen fehlender Erlaubnis.</string>
+    <string name="PedePermissao">Die App benötigt GPS aktiviert, um die zurückgelegte Entfernung anzuzeigen</string>
+</resources>
