@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Gehen</string>
+
+    <!--Parte 1 - Variáveis cujos textos são intraduzíveis: não há -->
+
+    <!--Parte 2 - Pedindo e Explicando sobre a permissão do GPS -->
     <string name="permissaoGPS">Möchten Sie GPS aktivieren?</string>
-    <string name="GPSAtivo">Schalte GPS ein</string>
-    <string name="GPSInativo">GPS deaktivieren</string>
-    <string name="PercusoAtivo">Route starten</string>
-    <string name="PercursoInativo">Kurs beenden</string>
-    <string name="Distancia">Zurückgelegte Strecke:</string>
-    <string name="Tempo">Die Zeit gereist:</string>
-    <string name="FaltadePermissao">GPS deaktiviert wegen fehlender Erlaubnis.</string>
-    <string name="PedePermissao">Die App benötigt GPS aktiviert, um die zurückgelegte Entfernung anzuzeigen</string>
+    <string name="pedePermissao">Die App benötigt GPS aktiviert, um die zurückgelegte Entfernung anzuzeigen</string>
+    <string name="faltaPermissao">GPS deaktiviert wegen fehlender Erlaubnis.</string>
+
+    <!--Se ativado...-->
+    <string name="ativarGPS">Schalte GPS ein</string>
+    <string name="ativandoGPS">Habilitando GPS</string>
+    <string name="ativadoGPS">GPS Habilitado</string>
+
+    <!--Se desativado...-->
+    <string name="desativarGPS">GPS deaktivieren</string>
+    <string name="desativandoGPS">Deshabilitando GPS</string>
+    <string name="desativadoGPS">GPS deshabilitado</string>
+
+    <!--Parte 3 - Ativando e desativando o percurso-->
+    <string name="ativarPercurso">Route starten</string>
+    <string name="ativadoPercurso">The Course has started</string>
+    <string name="desativarPercurso">Kurs beenden</string>
+    <string name="finalizadoPercurso">The Course has stopped</string>
+
+    <!--Parte 4 - Ilustrar ao usuário o que é o que é -->
+    <string name="distancia">Zurückgelegte Strecke:</string>
+    <string name="tempo">Die Zeit gereist:</string>
 </resources>

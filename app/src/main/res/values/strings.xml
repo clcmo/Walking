@@ -1,14 +1,32 @@
 <resources>
     <string name="app_name">Walking</string>
-    <string name="DistanciaPercorrida" translatable="false" />
-    <string name="Cronometro" translatable="false" />
+
+    <!--Parte 1 - Variáveis cujos textos são intraduzíveis-->
+    <string name="distanciaPercorrida" translatable="false" />
+    <string name="cronometro" translatable="false" />
+
+    <!--Parte 2 - Pedindo e Explicando sobre a permissão do GPS -->
     <string name="permissaoGPS">Would you like to enable GPS?</string>
-    <string name="GPSAtivo">Enable GPS</string>
-    <string name="GPSInativo">Disable GPS</string>
-    <string name="PercusoAtivo">Start Course</string>
-    <string name="PercursoInativo">End Course</string>
-    <string name="Distancia">Travelled Distance:</string>
-    <string name="Tempo">Time Spent:</string>
-    <string name="FaltadePermissao">GPS disabled because its not allowed.</string>
-    <string name="PedePermissao">" The app needs GPS enabled to show the distance traveled"</string>
+    <string name="pedePermissao">"The app needs GPS enabled to show the distance traveled"</string>
+    <string name="faltaPermissao">GPS disabled because its not allowed.</string>
+
+    <!--Se ativado...-->
+    <string name="ativarGPS">Enable GPS</string>
+    <string name="ativandoGPS">Enabling GPS</string>
+    <string name="ativadoGPS">Enabled GPS</string>
+
+    <!--Se desativado...-->
+    <string name="desativarGPS">Disable GPS</string>
+    <string name="desativandoGPS">Disabling GPS</string>
+    <string name="desativadoGPS">Disabled GPS</string>
+
+    <!--Parte 3 - Ativando e desativando o percurso-->
+    <string name="ativarPercurso">Start Course</string>
+    <string name="ativadoPercurso">The Course has started</string>
+    <string name="desativarPercurso">End Course</string>
+    <string name="finalizadoPercurso">The Course has stopped</string>
+
+    <!--Parte 4 - Ilustrar ao usuário o que é o que é -->
+    <string name="distancia">Travelled Distance:</string>
+    <string name="tempo">Time Spent:</string>
 </resources>

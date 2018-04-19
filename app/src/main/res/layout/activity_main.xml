@@ -34,7 +34,7 @@
         android:layout_row="1"
         android:layout_weight="@dimen/rowWeight"
         android:background="@color/colorButton"
-        android:text="@string/GPSAtivo"
+        android:text="@string/ativarGPS"
         android:textColor="@color/txtButton"
         android:textSize="14sp" />
 
@@ -49,7 +49,7 @@
         android:layout_row="1"
         android:layout_weight="@dimen/rowWeight"
         android:background="@color/colorButton"
-        android:text="@string/GPSInativo"
+        android:text="@string/desativarGPS"
         android:textColor="@color/txtButton"
         android:textSize="14sp" />
 
@@ -64,7 +64,7 @@
         android:layout_row="2"
         android:layout_weight="@dimen/rowWeight"
         android:background="@color/colorButton"
-        android:text="@string/PercusoAtivo"
+        android:text="@string/ativarPercurso"
         android:textColor="@color/txtButton"
         android:textSize="14sp" />
 
@@ -80,7 +80,7 @@
         android:layout_row="2"
         android:layout_weight="@dimen/rowWeight"
         android:background="@color/colorButton"
-        android:text="@string/PercursoInativo"
+        android:text="@string/desativarPercurso"
         android:textColor="@color/txtButton"
         android:textSize="14sp" />
 
@@ -94,7 +94,7 @@
         android:layout_row="3"
 
         android:layout_weight="@dimen/rowWeight"
-        android:text="@string/Distancia"
+        android:text="@string/distancia"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -110,7 +110,7 @@
         android:layout_row="3"
         android:layout_weight="@dimen/rowWeight"
 
-        android:text="@string/DistanciaPercorrida"
+        android:text="@string/distanciaPercorrida"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -128,7 +128,7 @@
         android:layout_row="4"
 
         android:layout_weight="@dimen/rowWeight"
-        android:text="@string/Tempo"
+        android:text="@string/tempo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

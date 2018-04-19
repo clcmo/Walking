@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Caminando</string>
-    <string name="Tempo">Tiempo Recorrido:</string>
-    <string name="Distancia">Distancia Recorrida:</string>
-    <string name="PercusoAtivo">Inicio Recorrido</string>
-    <string name="PercursoInativo">Finalizar Recorrido</string>
-    <string name="GPSInativo">Deshabilitar GPS</string>
-    <string name="GPSAtivo">Habilitar GPS</string>
+
+    <!--Parte 1 - Variáveis cujos textos são intraduzíveis: não há -->
+
+    <!--Parte 2 - Pedindo e Explicando sobre a permissão do GPS -->
     <string name="permissaoGPS">Me Gustaría Activar el GPS?</string>
-    <string name="FaltadePermissao">GPS deshabilitado por falta de permission.</string>
-    <string name="PedePermissao">" La aplicación necesita el GPS activado para mostrar la distancia recorrida"</string>
+    <string name="faltaPermissao">GPS deshabilitado por falta de permission.</string>
+    <string name="pedePermissao">"La aplicación necesita el GPS activado para mostrar la distancia recorrida"</string>
+
+    <!--Se ativado...-->
+    <string name="ativarGPS">Habilitar GPS</string>
+    <string name="ativandoGPS">Habilitando GPS</string>
+    <string name="ativadoGPS">GPS Habilitado</string>
+
+    <!--Se desativado...-->
+    <string name="desativarGPS">Deshabilitar GPS</string>
+    <string name="desativandoGPS">Deshabilitando GPS</string>
+    <string name="desativadoGPS">GPS deshabilitado</string>
+
+    <!--Parte 3 - Ativando e desativando o percurso-->
+    <string name="ativarPercurso">Inicio Recorrido</string>
+    <string name="ativadoPercurso">The Course has started</string>
+    <string name="desativarPercurso">Finalizar Recorrido</string>
+    <string name="finalizadoPercurso">The Course has stopped</string>
+
+    <!--Parte 4 - Ilustrar ao usuário o que é o que é -->
+    <string name="tempo">Tiempo Recorrido:</string>
+    <string name="distancia">Distancia Recorrida:</string>
 </resources>

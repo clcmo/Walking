@@ -10,6 +10,8 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,37 +23,56 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQ_PERMISSAO_GPS = 1001;
     private Chronometer cronometro;
 
+    //chamando os botões de permissão e consulta
+    private Button permissaoGPS;
+    private Button ativarGPS;
+    private Button desativarGPS;
+    private Button iniciarPercurso;
+    private Button finalizarPercurso;
+
+    //verificar se o usuário ativou o GPS
+    private boolean teste = false, testeGPS = false, latInicial = false;
+    private double distanciatotal = 0;
+    private Location locationA = new Location("point A");
+    private String stringfinal;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        permissaoGPS = findViewById(R.id.permissaoGPS);
+        ativarGPS = findViewById(R.id.ativarGPS);
+        desativarGPS = findViewById(R.id.desativarGPS);
+        iniciarPercurso = findViewById(R.id.iniciarPercurso);
+        finalizarPercurso = findViewById(R.id.finalizarPercurso);
         distanciaPercorrida = findViewById(R.id.distanciaPercorrida);
         cronometro = findViewById(R.id.cronometro);
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
     }
 
-    double calcDistancia(double latIni, double lngIni, double latFim, double lngFim) {
-        double disTerra = 6371;                         //em kilometros e considerando até mesmo a curvatura
-        double dLat = Math.toRadians(latFim - latIni);
-        double dLng = Math.toRadians(lngFim - lngIni);
-        double sindLat = Math.sin(dLat / 2);
-        double sindLng = Math.sin(dLng / 2);
-        double a = Math.pow(sindLat, 2) + Math.pow(sindLng, 2)
-                * Math.cos(Math.toRadians(latIni))
-                * Math.cos(Math.toRadians(latFim));
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        return ((disTerra * c) * 1000);
-    }
+    private Observador observer = new Observador();
+    private class Observador implements LocationListener {
 
-    private LocationListener locationListener = new LocationListener() {
         @Override
         public void onLocationChanged(Location location) {
-            double metros = calcDistancia(
-                    location.getLatitude(),     //latitude na posição inicial
-                    location.getLongitude(),    //longitude na posição inicial
-                    location.getLatitude(),     //latitude na posição final
-                    location.getLongitude());   //longitude na posição final
-            distanciaPercorrida.setText(String.format("%sms", metros));
+            if (teste == true) {
+                double latitude = location.getLatitude();
+                double longitude = location.getLongitude();
+                if (latInicial == false) {
+                    latInicial = true;
+                    locationA.setLatitude(latitude);
+                    locationA.setLongitude(longitude);
+                }
+                else {
+                    Location locationB = new Location("point B");
+                    locationB.setLatitude(latitude);
+                    locationB.setLongitude(longitude);
+                    distanciatotal = locationA.distanceTo(locationB);
+                    String texto = String.format("%.2f", distanciatotal);
+                    distanciaPercorrida.setText(texto);
+                }
+            }
         }
 
         @Override
@@ -68,58 +89,75 @@ public class MainActivity extends AppCompatActivity {
         public void onProviderDisabled(String s) {
 
         }
-    };
-
-    @Override
-    protected void onStart() {
-        super.onStart();        //a permissão ainda não foi concedida pelo usuário??
-        if (ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
-        {
-            //se não estiver ativado o GPS, é exibido este toast
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.ACCESS_FINE_LOCATION)){
-                Toast.makeText(this,
-                        "@string/PedePermissao",
-                        Toast.LENGTH_SHORT).show();
-            }
-            //se sim, ele pede permissão
-            ActivityCompat.requestPermissions(this, new String []
-                    {Manifest.permission.ACCESS_FINE_LOCATION}, REQ_PERMISSAO_GPS);
-        } else {
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,
-                    0, locationListener);
-            distanciaPercorrida.setText("");
-            cronometro.stop();
-        }
-        cronometro.start();
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull
-            String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case REQ_PERMISSAO_GPS:
-                if (grantResults.length > 0 && grantResults[0] ==
-                        PackageManager.PERMISSION_GRANTED){
-                    if (ActivityCompat.checkSelfPermission(this,
-                            Manifest.permission.ACCESS_FINE_LOCATION) ==
-                            PackageManager.PERMISSION_GRANTED){
+    public void onClick(View v) {
+        switch (v.getId()) {
+            //PermissãoGPS
+            case R.id.permissaoGPS:
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) ==
+                        PackageManager.PERMISSION_GRANTED){ //Se o usuário já permitiu mandar mensagem de aviso
+                    Toast.makeText(this,getString(R.string.ativadoGPS),Toast.LENGTH_SHORT).show();
+                } else{
+                    ActivityCompat.requestPermissions(this,new String[]{ //Senão permitiu, faz a solicitação
+                            Manifest.permission.ACCESS_FINE_LOCATION }, REQ_PERMISSAO_GPS);
+                }
+                break;
 
-                        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,
-                                0, locationListener);
-                        distanciaPercorrida.setText("");
-                    }
+            //Ativar GPS
+            case R.id.ativarGPS:
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) ==
+                        PackageManager.PERMISSION_GRANTED){ //Se já foi permitido ativa
+                    testeGPS = true;
+                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,1000,0,observer);
+                    Toast.makeText(this,getString(R.string.ativandoGPS),Toast.LENGTH_SHORT).show();
+
+                } else{ //Senão avisa que precisa permitir para ativar
+                    Toast.makeText(this,getString(R.string.pedePermissao),Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+            //Desativar GPS
+            case R.id.desativarGPS:
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) ==
+                        PackageManager.PERMISSION_GRANTED){ //Se já foi permitido ativa
+                    testeGPS = false;
+                    locationManager.removeUpdates(observer);
+                    Toast.makeText(this,getString(R.string.desativandoGPS),Toast.LENGTH_SHORT).show();
+                } else{ //Senão avisa que precisa permitir para ativar
+                    Toast.makeText(this,getString(R.string.desativadoGPS),Toast.LENGTH_SHORT).show();
+                }
+                break;
+
+            //Iniciar Percuso
+            case R.id.iniciarPercurso:
+                if (teste == true) {
+                    Toast.makeText(this,getString(R.string.ativadoPercurso),Toast.LENGTH_SHORT).show();
+                } else if (testeGPS == false) {
+                    Toast.makeText(this,getString(R.string.desativadoGPS),Toast.LENGTH_SHORT).show();
                 } else {
-                    distanciaPercorrida.setText("@string/FaltadePermissao");
-                } break;
-        }
-    }
+                    teste = true;
+                    desativarGPS.setEnabled(false);
+                    distanciaPercorrida.setText("0");
+                    cronometro.start();
+                }
+                break;
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        locationManager.removeUpdates(locationListener);
-        cronometro.stop();
+            //Terminar Percuso
+            case R.id.finalizarPercurso:
+                if (teste == false) {
+                    Toast.makeText(this,getString(R.string.finalizadoPercurso),Toast.LENGTH_SHORT).show();
+                } else{
+                    teste = false;
+                    desativarGPS.setEnabled(true);
+                    cronometro.stop();
+                    latInicial = false;
+                    distanciaPercorrida.setText(" ");
+                    stringfinal = String.format("Distancia: %.2f Tempo: ",distanciatotal);
+                    Toast.makeText(this,stringfinal,Toast.LENGTH_SHORT).show();
+                }
+                break;
+        }
+
     }
 }
