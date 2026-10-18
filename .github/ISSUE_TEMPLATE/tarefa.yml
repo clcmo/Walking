@@ -1,18 +1,23 @@
 name: Tarefa
 description: Uma entrega do roadmap do Ariston
 title: "[Tarefa] "
-labels: ["tarefa"]
+labels: ["tarefa", "roadmap", "issues"]
 body:
   - type: dropdown
     id: area
     attributes:
       label: Área
       options:
-        - Arquitetura (MVVM)
-        - UI
+        - Arquitetura (MVVM / MVC / MVP)
+        - UX/UI
         - IA
+        - Kotlin
+        - Flutter
+        - Node.js
+        - React
         - Firebase
         - CI/CD
+        - Login SSO
         - Docs
     validations:
       required: true
@@ -39,9 +44,8 @@ body:
       label: Critérios de aceite
       description: Como saber que está pronta.
       value: |
-        - [ ] 
-        - [ ] 
-        - [ ] CI (analyze-test-build) verde
+        - [ ] CI verde
+        - [ ] CD verde
     validations:
       required: true
   - type: textarea
