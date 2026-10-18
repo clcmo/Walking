@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Caminhando</string>
-
-    <!--Parte 1 - Variáveis cujos textos são intraduzíveis: não há -->
-
-    <!--Parte 2 - Pedindo e Explicando sobre a permissão do GPS -->
-    <string name="permissaoGPS">Gostaria de ativar o GPS?</string>
-    <string name="faltaPermissao">GPS desabilitado por falta de permissão.</string>
-    <string name="pedePermissao">O app precisa do GPS ativado para mostrar a distância percorrida</string>
-
-    <!--Se ativado...-->
-    <string name="ativarGPS">Ativar GPS</string>
-    <string name="ativandoGPS">Ativando GPS</string>
-    <string name="ativadoGPS">GPS Ativado</string>
-
-    <!--Se desativado...-->
-    <string name="desativarGPS">Desativar GPS</string>
-    <string name="desativandoGPS">Desativando GPS</string>
-    <string name="desativadoGPS">GPS Desativado</string>
-
-    <!--Parte 3 - Ativando e desativando o percurso-->
-    <string name="ativarPercurso">Iniciar Percurso</string>
-    <string name="ativadoPercurso">Percurso Iniciado</string>
-    <string name="desativarPercurso">Finalizar Percurso</string>
-    <string name="finalizadoPercurso">Percurso Finalizado</string>
-
-    <!--Parte 4 - Ilustrar ao usuário o que é o que é -->
-    <string name="distancia">Distância Percorrida:</string>
-    <string name="tempo">Tempo Percorrido:</string>
+    <string name="tab_today">Hoje</string>
+    <string name="tab_history">Histórico</string>
+    <string name="tab_profile">Perfil</string>
+    <string name="goal_label">Meta de hoje</string>
+    <string name="progress_of_goal">de %1$d min</string>
+    <string name="start">Iniciar</string>
+    <string name="history_empty">Nenhum percurso ainda. Comece o primeiro.</string>
+    <string name="profile_soon">Perfil e ajustes em breve.</string>
+    <string name="phase_running">Treino em andamento</string>
+    <string name="phase_paused">Treino pausado</string>
+    <string name="phase_finished">Treino finalizado</string>
+    <string name="pause">Pausar</string>
+    <string name="resume">Retomar</string>
+    <string name="finish">Finalizar</string>
+    <string name="done">Concluir</string>
+    <string name="label_time">Tempo</string>
+    <string name="label_distance">Distância</string>
+    <string name="label_pace">Ritmo</string>
+    <string name="pace_value">%1$s /km</string>
+    <string name="distance_value">%1$s km</string>
+    <string name="permission_needed">A localização precisa é necessária para medir o percurso. Permita nas configurações do app.</string>
+    <string name="notif_channel">Treino</string>
 </resources>

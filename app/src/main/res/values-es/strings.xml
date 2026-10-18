@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Caminando</string>
-
-    <!--Parte 1 - Variáveis cujos textos são intraduzíveis: não há -->
-
-    <!--Parte 2 - Pedindo e Explicando sobre a permissão do GPS -->
-    <string name="permissaoGPS">Me Gustaría Activar el GPS?</string>
-    <string name="faltaPermissao">GPS deshabilitado por falta de permission.</string>
-    <string name="pedePermissao">"La aplicación necesita el GPS activado para mostrar la distancia recorrida"</string>
-
-    <!--Se ativado...-->
-    <string name="ativarGPS">Habilitar GPS</string>
-    <string name="ativandoGPS">Habilitando GPS</string>
-    <string name="ativadoGPS">GPS Habilitado</string>
-
-    <!--Se desativado...-->
-    <string name="desativarGPS">Deshabilitar GPS</string>
-    <string name="desativandoGPS">Deshabilitando GPS</string>
-    <string name="desativadoGPS">GPS deshabilitado</string>
-
-    <!--Parte 3 - Ativando e desativando o percurso-->
-    <string name="ativarPercurso">Inicio Recorrido</string>
-    <string name="ativadoPercurso">The Course has started</string>
-    <string name="desativarPercurso">Finalizar Recorrido</string>
-    <string name="finalizadoPercurso">The Course has stopped</string>
-
-    <!--Parte 4 - Ilustrar ao usuário o que é o que é -->
-    <string name="tempo">Tiempo Recorrido:</string>
-    <string name="distancia">Distancia Recorrida:</string>
+    <string name="tab_today">Hoy</string>
+    <string name="tab_history">Historial</string>
+    <string name="tab_profile">Perfil</string>
+    <string name="goal_label">Meta de hoy</string>
+    <string name="progress_of_goal">de %1$d min</string>
+    <string name="start">Iniciar</string>
+    <string name="history_empty">Aún no hay recorridos. Empieza el primero.</string>
+    <string name="profile_soon">Perfil y ajustes próximamente.</string>
+    <string name="phase_running">Entrenamiento en curso</string>
+    <string name="phase_paused">Entrenamiento en pausa</string>
+    <string name="phase_finished">Entrenamiento finalizado</string>
+    <string name="pause">Pausar</string>
+    <string name="resume">Reanudar</string>
+    <string name="finish">Finalizar</string>
+    <string name="done">Listo</string>
+    <string name="label_time">Tiempo</string>
+    <string name="label_distance">Distancia</string>
+    <string name="label_pace">Ritmo</string>
+    <string name="pace_value">%1$s /km</string>
+    <string name="distance_value">%1$s km</string>
+    <string name="permission_needed">Se necesita la ubicación precisa para medir el recorrido. Permítela en los ajustes de la app.</string>
+    <string name="notif_channel">Entrenamiento</string>
 </resources>

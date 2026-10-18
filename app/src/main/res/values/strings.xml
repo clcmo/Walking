@@ -1,32 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Walking</string>
-
-    <!--Parte 1 - Variáveis cujos textos são intraduzíveis-->
-    <string name="distanciaPercorrida" translatable="false" />
-    <string name="cronometro" translatable="false" />
-
-    <!--Parte 2 - Pedindo e Explicando sobre a permissão do GPS -->
-    <string name="permissaoGPS">Would you like to enable GPS?</string>
-    <string name="pedePermissao">"The app needs GPS enabled to show the distance traveled"</string>
-    <string name="faltaPermissao">GPS disabled because its not allowed.</string>
-
-    <!--Se ativado...-->
-    <string name="ativarGPS">Enable GPS</string>
-    <string name="ativandoGPS">Enabling GPS</string>
-    <string name="ativadoGPS">Enabled GPS</string>
-
-    <!--Se desativado...-->
-    <string name="desativarGPS">Disable GPS</string>
-    <string name="desativandoGPS">Disabling GPS</string>
-    <string name="desativadoGPS">Disabled GPS</string>
-
-    <!--Parte 3 - Ativando e desativando o percurso-->
-    <string name="ativarPercurso">Start Course</string>
-    <string name="ativadoPercurso">The Course has started</string>
-    <string name="desativarPercurso">End Course</string>
-    <string name="finalizadoPercurso">The Course has stopped</string>
-
-    <!--Parte 4 - Ilustrar ao usuário o que é o que é -->
-    <string name="distancia">Travelled Distance:</string>
-    <string name="tempo">Time Spent:</string>
+    <string name="tab_today">Today</string>
+    <string name="tab_history">History</string>
+    <string name="tab_profile">Profile</string>
+    <string name="goal_label">Today\'s goal</string>
+    <string name="progress_of_goal">of %1$d min</string>
+    <string name="start">Start</string>
+    <string name="history_empty">No walks yet. Start your first one.</string>
+    <string name="profile_soon">Profile and settings coming soon.</string>
+    <string name="phase_running">Walk in progress</string>
+    <string name="phase_paused">Walk paused</string>
+    <string name="phase_finished">Walk finished</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="finish">Finish</string>
+    <string name="done">Done</string>
+    <string name="label_time">Time</string>
+    <string name="label_distance">Distance</string>
+    <string name="label_pace">Pace</string>
+    <string name="pace_value">%1$s /km</string>
+    <string name="distance_value">%1$s km</string>
+    <string name="permission_needed">Precise location is needed to measure your walk. Allow it in the app settings.</string>
+    <string name="notif_channel">Walk tracking</string>
 </resources>
