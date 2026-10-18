@@ -12,7 +12,7 @@ mais recente antes de relatar um problema.
 Relate vulnerabilidades de forma privada usando **Report a vulnerability** na
 aba **Security** do repositório no GitHub:
 
-https://github.com/clcmo/walking/security/advisories/new
+<https://github.com/clcmo/walking/security/advisories/new>
 
 Não relate vulnerabilidades de segurança por meio de issues públicas, pull
 requests ou outros canais públicos. Se o envio privado de relatos não estiver

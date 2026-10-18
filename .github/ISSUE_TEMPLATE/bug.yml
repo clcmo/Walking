@@ -40,7 +40,7 @@ body:
     id: ambiente
     attributes:
       label: Ambiente
-      description: Saída de `flutter --version` e, se for web, o navegador.
+      description: Saída de logs, versão do sistema operacional, versão do navegador, etc.
   - type: textarea
     id: logs
     attributes:
